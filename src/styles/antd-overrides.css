@@ -1,0 +1,18 @@
+.ant-btn {
+  font-weight: 600;
+}
+
+.ant-drawer .ant-drawer-content,
+.ant-modal .ant-modal-content {
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.ant-modal .ant-modal-header {
+  background: transparent;
+  color: var(--color-text-primary);
+}
+
+.ant-modal .ant-modal-title {
+  color: var(--color-text-primary);
+}

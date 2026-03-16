@@ -1,99 +1,74 @@
-import { useState } from "react";
-import "./App.css";
+import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar";
+import styles from "./App.module.css";
+import { useTheme } from "./hooks/useTheme";
+import { useChallengeState } from "./hooks/useChallengeState";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { theme, toggleTheme } = useTheme();
+  const {
+    days,
+    selectedDay,
+    setSelectedDay,
+    currentDayLabel,
+    completedCount,
+    totalDays,
+  } = useChallengeState();
 
   return (
-    <>
-      <section id="center">
-        <div className="hero"></div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className={styles.app}>
+      <Header
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        currentDayLabel={currentDayLabel}
+      />
 
-      <div className="ticks"></div>
+      <main className={styles.pageBody}>
+        <Sidebar
+          days={days}
+          selectedDay={selectedDay}
+          onSelectDay={setSelectedDay}
+        />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <section className={styles.content}>
+          <div className={styles.contentInner}>
+            <div className={styles.placeholderCard}>
+              <p className={styles.eyebrow}>BackstagePass Challenge</p>
+              <h1 className={styles.title}>Responsive page shell is ready</h1>
+              <p className={styles.description}>
+                We have completed the foundation with theme support, header, and
+                desktop/mobile sidebar.
+              </p>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+              <div className={styles.statsRow}>
+                <div className={styles.statBox}>
+                  <span className={styles.statLabel}>Selected Day</span>
+                  <strong className={styles.statValue}>
+                    Day {selectedDay}
+                  </strong>
+                </div>
+                <div className={styles.statBox}>
+                  <span className={styles.statLabel}>Completed</span>
+                  <strong className={styles.statValue}>
+                    {completedCount}/{totalDays}
+                  </strong>
+                </div>
+                <div className={styles.statBox}>
+                  <span className={styles.statLabel}>Theme</span>
+                  <strong className={styles.statValue}>{theme}</strong>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.placeholderGrid}>
+              <div className={styles.block}>Check-in composer placeholder</div>
+              <div className={styles.block}>Submission card placeholder</div>
+              <div className={styles.block}>Community feed placeholder</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
   );
 }
 
