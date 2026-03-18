@@ -6,6 +6,10 @@
   background-color: var(--color-surface);
 }
 
+.modal :global(.ant-modal-close) {
+  color: var(--color-modal-open-text);
+}
+
 .content {
   display: flex;
   flex-direction: column;

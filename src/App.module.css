@@ -8,7 +8,6 @@
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
   align-items: start;
-  padding-bottom: 40px;
 }
 
 .content {

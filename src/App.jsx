@@ -18,6 +18,7 @@ import { Avatar } from "antd";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
+
   const { days, selectedDay, setSelectedDay, currentDayLabel } =
     useChallengeState();
   const {
@@ -54,6 +55,7 @@ function App() {
           onSelectDay={setSelectedDay}
           isSidebarDrawerOpen={isSidebarDrawerOpen}
           handleCloseSidebar={() => setIsSidebarDrawerOpen(false)}
+          theme={theme}
         />
 
         <section className={styles.content}>
@@ -107,6 +109,7 @@ function App() {
         days={days}
         selectedDay={selectedDay}
         onSelectDay={setSelectedDay}
+        theme={theme}
       />
 
       <CheckinModal

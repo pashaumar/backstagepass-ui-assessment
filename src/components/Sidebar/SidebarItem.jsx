@@ -26,20 +26,17 @@ function SidebarItem({ day, isSelected, onClick }) {
       >
         <span className={styles.dayText}>{day.label}</span>
 
-        <span
-          className={classnames(
-            styles.dayIndicator,
-            isSelected && styles.dayIndicatorSelected,
-          )}
-        >
-          {isActive ? (
-            ""
-          ) : isCompleted ? (
-            <CheckCircleFilled style={{ color: "green" }} />
-          ) : isLocked ? (
-            <LockOutlined />
-          ) : null}
-        </span>
+        {isCompleted || isLocked ? (
+          <span className={classnames(styles.dayIndicator)}>
+            {isActive ? (
+              ""
+            ) : isCompleted ? (
+              <CheckCircleFilled style={{ color: "green" }} />
+            ) : isLocked ? (
+              <LockOutlined />
+            ) : null}
+          </span>
+        ) : null}
       </div>
     </button>
   );

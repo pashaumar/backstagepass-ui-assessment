@@ -33,6 +33,7 @@
   --color-modal-add-item-border: #dbd8e0;
   --color-modal-open-inner: #ffffff;
   --color-modal-open-text: #0400119c;
+  --color-card-border: #eae7ec;
 }
 
 :root[data-theme="dark"] {
@@ -47,6 +48,7 @@
   --color-modal-add-item-border: #3c393f;
   --color-modal-open-inner: #1a191b;
   --color-modal-open-text: #f5f1ffb7;
+  --color-card-border: #2b292d;
 
   --color-page-bg: #0b0c10;
   --color-surface: #14151a;
