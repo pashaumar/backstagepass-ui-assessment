@@ -1,0 +1,172 @@
+.modal :global(.ant-modal-content) {
+  border-radius: 28px;
+  padding: 22px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  font-weight: 700;
+}
+
+.name {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.meta {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 28px;
+  padding: 18px;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.postName {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.postTime {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.postText {
+  margin: 16px 0 0;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--color-text-primary);
+}
+
+.media {
+  margin-top: 16px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: var(--color-elevated);
+}
+
+.image,
+.video {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+.videoPreview {
+  position: relative;
+}
+
+.playOverlay {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(17, 17, 17, 0.72);
+  color: #ffffff;
+  font-size: 22px;
+  pointer-events: none;
+}
+
+.emptyMedia {
+  margin-top: 16px;
+  min-height: 180px;
+  border-radius: 22px;
+  border: 1px dashed var(--color-border-strong);
+  background: var(--color-elevated);
+  display: grid;
+  place-items: center;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footerMeta {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.reaction {
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-elevated);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  background: #111111 !important;
+  border-color: #111111 !important;
+}
+
+@media (max-width: 767px) {
+  .modal :global(.ant-modal-content) {
+    padding: 16px;
+    border-radius: 24px;
+  }
+
+  .image,
+  .video {
+    height: 220px;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+  }
+
+  .actions :global(.ant-btn) {
+    width: 100%;
+  }
+}

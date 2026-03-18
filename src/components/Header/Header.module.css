@@ -1,0 +1,154 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--color-header-bg);
+}
+
+.inner {
+  width: min(1440px, calc(100% - 32px));
+  height: 52px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: fit-content;
+}
+
+.logoMark {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #111111, #4b5563);
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.logoText {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.iconButton {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.iconButton:hover {
+  transform: translateY(-1px);
+  background: var(--color-elevated);
+}
+
+.back {
+  display: flex;
+  column-gap: 8px;
+  cursor: pointer;
+}
+
+.dayPill {
+}
+
+.points {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--color-header-points-bg);
+  color: var(--color-header-points-text);
+  border-radius: 20px;
+  height: 32px;
+  width: 66px;
+}
+
+.themeButton {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  padding: 0 18px;
+  border-bottom: 1px solid var(--color-wrapper-header-border);
+  border-top: 1px solid var(--color-wrapper-header-border);
+}
+
+.separator {
+  height: 28px;
+  width: 1px;
+  background: #14003527;
+}
+
+.wrapperLeftSection {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.wrapperRightSection {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.showOnMobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .inner {
+    width: min(100%, calc(100% - 24px));
+    min-height: 64px;
+  }
+
+  .logoText {
+    display: none;
+  }
+
+  .dayPill {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .points {
+    padding: 8px 12px;
+  }
+
+  .showOnMobile {
+    display: flex;
+  }
+
+  .wrapperLeftSection {
+    display: none;
+  }
+}

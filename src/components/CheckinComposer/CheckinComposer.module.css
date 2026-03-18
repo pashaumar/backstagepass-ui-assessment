@@ -1,0 +1,73 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.endsIn {
+  background: #e5484d;
+  border-radius: 20px;
+  text-align: center;
+  padding: 2px;
+  color: white;
+  font-size: 12px;
+  width: 124px;
+}
+
+.gradientInput {
+  border-radius: 30px;
+  padding: 2px;
+  background: linear-gradient(90deg, #b8860b, #fff0d1);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.gradientInputInner {
+  background: white;
+  border-radius: 28px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #0400119c;
+}
+
+@media (max-width: 767px) {
+  .topRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .metaRow {
+    justify-content: flex-start;
+  }
+
+  .composer {
+    padding: 16px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cta {
+    width: 100%;
+    justify-content: center;
+  }
+}

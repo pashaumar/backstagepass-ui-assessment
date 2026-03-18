@@ -1,0 +1,204 @@
+.drawerRoot :global(.ant-drawer-content) {
+  background: var(--color-surface);
+}
+
+.drawerRoot :global(.ant-drawer-body) {
+  p {
+    margin: 0;
+  }
+}
+
+.drawerRoot :global(.ant-drawer-mask) {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.closeButton {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-elevated);
+  color: var(--color-text-primary);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.closeButton:hover {
+  background: var(--color-border);
+  transform: scale(1.02);
+}
+
+.heading {
+  margin: 0;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.banner {
+  margin: 24px 24px 0;
+}
+
+.bannerImage {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: contain;
+}
+
+.body {
+  padding: 28px 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.statCard {
+  background: var(--color-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  padding: 20px 22px;
+}
+
+.statLabel {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text-secondary);
+}
+
+.statValue {
+  margin: 0;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.descriptionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.descriptionLabel {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+.description {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-text-primary);
+}
+
+.footer {
+  margin-top: auto;
+  padding: 32px 24px 28px;
+}
+
+.actionButton {
+  height: 58px !important;
+  border-radius: 999px !important;
+  background: #1c1b29 !important;
+  border-color: #1c1b29 !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+.actionButton:hover {
+  background: #161522 !important;
+  border-color: #161522 !important;
+}
+
+@media (max-width: 767px) {
+  .heading {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .banner {
+    margin: 20px 18px 0;
+    border-radius: 24px;
+  }
+
+  .bannerImage {
+    height: 220px;
+  }
+
+  .body {
+    padding: 22px 18px 0;
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .statsRow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .statCard {
+    border-radius: 20px;
+    padding: 16px 18px;
+  }
+
+  .statValue {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .footer {
+    padding: 24px 18px 20px;
+  }
+
+  .actionButton {
+    height: 52px !important;
+    font-size: 16px !important;
+  }
+}
