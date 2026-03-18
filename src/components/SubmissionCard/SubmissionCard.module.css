@@ -10,11 +10,11 @@
 .completedBanner {
   position: absolute;
   top: -40px;
-  background-color: #e6f6eb;
+  background-color: var(--color-submission-bg);
   height: 80px;
   width: 100%;
   z-index: -1;
-  color: #218358;
+  color: var(--color-submission-text);
   display: flex;
   justify-content: center;
   padding-top: 12px;
