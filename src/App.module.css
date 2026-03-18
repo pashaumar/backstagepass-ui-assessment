@@ -7,7 +7,6 @@
 .pageBody {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
-  gap: 24px;
   align-items: start;
   padding-bottom: 40px;
 }
@@ -103,7 +102,7 @@
 .feedSection {
   border: 1px solid #14003527;
   border-radius: 24px;
-  background-color: white;
+  background-color: var(--color-surface);
   padding: 16px 12px 12px 12px;
 }
 

@@ -1,9 +1,9 @@
 .drawerRoot :global(.ant-drawer-content) {
-  background: white;
 }
 
 .drawerRoot :global(.ant-drawer-body) {
   padding: 0;
+  background: var(--color-surface);
 }
 
 .drawerRoot :global(.ant-drawer-mask) {
@@ -12,7 +12,7 @@
 
 .drawerContent {
   min-height: 100vh;
-  background: white;
+  background: var(--color-surface);
 }
 
 .drawerHeader {

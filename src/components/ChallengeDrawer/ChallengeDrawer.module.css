@@ -3,6 +3,8 @@
 }
 
 .drawerRoot :global(.ant-drawer-body) {
+  background: var(--color-surface);
+
   p {
     margin: 0;
   }

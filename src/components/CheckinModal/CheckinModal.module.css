@@ -2,6 +2,10 @@
   border-radius: 28px;
 }
 
+.modal :global(.ant-modal-container) {
+  background-color: var(--color-surface);
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -35,6 +39,7 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  color: var(--color-text-primary);
 }
 
 .meta {
@@ -64,11 +69,12 @@
 }
 
 .uploader :global(.ant-upload) {
-  background: #f2eff3;
-  border: 1px solid #dbd8e0;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-modal-add-item-border);
   border-radius: 16px;
   padding: 4px;
   height: 376px;
+  color: var(--color-text-primary);
 }
 
 .uploadIcon {

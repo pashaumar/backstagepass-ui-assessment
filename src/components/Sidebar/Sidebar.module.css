@@ -1,6 +1,10 @@
 .sidebar {
   width: 258px;
-  background-color: white;
+  background: linear-gradient(
+    180deg,
+    var(--color-sidebar-top-bg) 0%,
+    var(--color-sidebar-bottom-bg) 100%
+  );
   height: 100%;
 }
 
@@ -31,7 +35,7 @@
 }
 
 .dayItemSelected {
-  background: white;
+  background: var(--color-sidebar-day-item-bg);
 }
 
 .dayItemLocked {

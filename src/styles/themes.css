@@ -27,6 +27,12 @@
   --color-wrapper-header-border: #f2eff3;
   --color-header-points-bg: #30004010;
   --color-header-points-text: #211f26;
+  --color-sidebar-top-bg: #ffffff;
+  --color-sidebar-bottom-bg: #f7f6fc;
+  --color-sidebar-day-item-bg: #ffffff;
+  --color-modal-add-item-border: #dbd8e0;
+  --color-modal-open-inner: #ffffff;
+  --color-modal-open-text: #0400119c;
 }
 
 :root[data-theme="dark"] {
@@ -35,6 +41,12 @@
   --color-wrapper-header-border: #232225;
   --color-header-points-bg: #ebeaf814;
   --color-header-points-text: #ffffff;
+  --color-sidebar-top-bg: #000000;
+  --color-sidebar-bottom-bg: #030303;
+  --color-sidebar-day-item-bg: #030303;
+  --color-modal-add-item-border: #3c393f;
+  --color-modal-open-inner: #1a191b;
+  --color-modal-open-text: #f5f1ffb7;
 
   --color-page-bg: #0b0c10;
   --color-surface: #14151a;

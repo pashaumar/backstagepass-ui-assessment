@@ -36,13 +36,13 @@
 }
 
 .gradientInputInner {
-  background: white;
+  background: var(--color-modal-open-inner);
   border-radius: 28px;
   padding: 10px 16px;
   display: flex;
   align-items: center;
   width: 100%;
-  color: #0400119c;
+  color: var(--color-modal-open-text);
 }
 
 @media (max-width: 767px) {
