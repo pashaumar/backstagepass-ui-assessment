@@ -4,13 +4,24 @@ import { sidebarDays } from "../data/sidebarDays";
 export function useChallengeState() {
   const [selectedDay, setSelectedDay] = useState(sidebarDays[1]);
 
-  const days = sidebarDays;
+  const currentDayId = selectedDay?.id;
 
-  const handleSelectDay = (selectedDay) => {
-    const clickedDay = days.find((day) => day.id === selectedDay.id);
+  const days = useMemo(() => {
+    if (!currentDayId) return sidebarDays;
 
-    if (!clickedDay || clickedDay.status === "locked") return;
-    setSelectedDay(selectedDay);
+    return sidebarDays.map((day) => ({
+      ...day,
+      status:
+        day.id < currentDayId
+          ? "completed"
+          : day.id === currentDayId
+            ? "active"
+            : "locked",
+    }));
+  }, [currentDayId]);
+
+  const handleSelectDay = (day) => {
+    setSelectedDay(day);
   };
 
   const completedCount = useMemo(

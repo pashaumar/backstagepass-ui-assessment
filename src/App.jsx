@@ -21,6 +21,7 @@ function App() {
 
   const { days, selectedDay, setSelectedDay, currentDayLabel } =
     useChallengeState();
+
   const {
     isCheckinModalOpen,
     isPreviewModalOpen,

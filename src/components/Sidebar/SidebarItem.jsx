@@ -16,7 +16,6 @@ function SidebarItem({ day, isSelected, onClick }) {
         isLocked && styles.dayItemLocked,
       )}
       onClick={() => onClick(day)}
-      disabled={isLocked}
     >
       <div
         className={classnames(
